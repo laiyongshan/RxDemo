@@ -29,7 +29,6 @@ public class AriActivity extends BaseActivity {
 
     }
 
-    @Override
     protected void initViews() {
         NumberButton numberButton = (NumberButton) findViewById(R.id.number_button);
         //assert numberButton != null;

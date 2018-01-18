@@ -19,15 +19,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yeohe.rxdemo.R;
+import com.yeohe.rxdemo.utils.KnifeKit;
 
 import java.util.List;
+
+import butterknife.ButterKnife;
 
 
 /**
  * base 来进行 toolbar dialog 初始化,activity栈的添加,删除等
  * Created by ccj on 2016/7/5.
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public  class BaseActivity extends AppCompatActivity {
 
     private static final String TAG = "BaseActivity";
     protected Dialog progressDialog;
@@ -54,6 +57,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
+
+//        ButterKnife.bind(this);
+
         mContext = this;
         initDialog();
         initView();
@@ -69,8 +75,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    //初始化控件
-    protected abstract void  initViews();
 
     private void initDialog() {
 //        progressDialog = new ProgressDialog(this);
@@ -152,6 +156,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT);
         content.addView(contentView, params);
+
+        bindUI(null);
+    }
+
+    public void bindUI(View rootView) {
+        KnifeKit.bind(this);
     }
 
     /**

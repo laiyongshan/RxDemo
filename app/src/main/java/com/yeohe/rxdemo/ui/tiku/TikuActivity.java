@@ -29,7 +29,6 @@ public class TikuActivity extends BaseActivity implements View.OnClickListener{
         initViews();
     }
 
-    @Override
     protected void initViews() {
         class_one_btn=findViewById(R.id.class_one_btn);
         class_four_btn=findViewById(R.id.class_four_btn);

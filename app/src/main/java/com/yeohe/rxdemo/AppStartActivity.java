@@ -58,8 +58,4 @@ public class AppStartActivity extends BaseActivity {
         super.onDestroy();
     }
 
-    @Override
-    protected void initViews() {
-
-    }
 }

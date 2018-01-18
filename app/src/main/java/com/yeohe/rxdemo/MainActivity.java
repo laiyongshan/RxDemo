@@ -20,6 +20,7 @@ import com.yeohe.rxdemo.ui.exchange.RateActivity;
 import com.yeohe.rxdemo.ui.lottery.LotteryActivity;
 import com.yeohe.rxdemo.ui.mobileAddress.MobileAddressActivity;
 import com.yeohe.rxdemo.ui.postCode.PostCodeActivitry;
+import com.yeohe.rxdemo.ui.share.ShareDemoActivity;
 import com.yeohe.rxdemo.ui.tiku.TikuActivity;
 import com.yeohe.rxdemo.utils.ToastUtil;
 import com.yeohe.rxdemo.widgets.MyGridView;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     Intent intent;
     private void initData(final Context context){
         gv_type=findViewById(R.id.gv_type);
-        String[] type_strArr = {"手机号码归属地", "邮编查询", "空气质量", "驾考题库", "电影票房", "货币汇率","彩票开奖结果","微信精选"};
+        String[] type_strArr = {"手机号码归属地", "邮编查询", "空气质量", "驾考题库", "电影票房", "货币汇率","彩票开奖结果","微信精选","分享Demo"};
         types = new ArrayList<Integer>();
         types.add(R.drawable.ic_launcher_foreground);//手机号码归属地
         types.add(R.drawable.ic_launcher_foreground);//邮编查询
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         types.add(R.drawable.ic_launcher_foreground);//货币汇率
         types.add(R.drawable.ic_launcher_foreground);//彩票开奖结果
         types.add(R.drawable.ic_launcher_foreground);//微信精选
+        types.add(R.drawable.ic_launcher_foreground);//Android系统分享Demo
         typeAdapter = new TypeAdapter(types, context, type_strArr, 2);
         gv_type.setAdapter(typeAdapter);
         gv_type.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -91,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
 
                     case 7:
                         intent=new Intent(MainActivity.this, WXArticleActivity.class);
+                        break;
+
+                    case 8:
+                        intent=new Intent(MainActivity.this, ShareDemoActivity.class);
                         break;
                 }
 

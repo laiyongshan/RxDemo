@@ -43,7 +43,6 @@ public class MobileAddressActivity extends BaseActivity {
         initViews();
     }
 
-    @Override
     protected void initViews() {
         phone_et=findViewById(R.id.phone_et);
         result_tv=findViewById(R.id.result_tv);

@@ -51,7 +51,6 @@ public class WXArticleActivity extends BaseActivity {
         getWxCategory();
     }
 
-    @Override
     protected void initViews() {
         viewPager=findViewById(R.id.viewpager);
         tabLayout=findViewById(R.id.tabs);

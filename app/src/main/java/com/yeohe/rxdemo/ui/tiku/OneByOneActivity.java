@@ -21,7 +21,6 @@ public class OneByOneActivity extends BaseActivity {
         setBackArrow();
     }
 
-    @Override
     protected void initViews() {
 
     }

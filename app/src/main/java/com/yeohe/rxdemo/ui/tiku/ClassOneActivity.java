@@ -18,7 +18,6 @@ public class ClassOneActivity extends BaseActivity {
 
     }
 
-    @Override
     protected void initViews() {
 
     }

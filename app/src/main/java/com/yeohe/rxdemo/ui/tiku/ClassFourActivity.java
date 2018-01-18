@@ -20,7 +20,6 @@ public class ClassFourActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
     }
 
-    @Override
     protected void initViews() {
 
     }

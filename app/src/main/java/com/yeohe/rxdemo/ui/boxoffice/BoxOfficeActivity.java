@@ -31,7 +31,6 @@ public class BoxOfficeActivity extends BaseActivity {
         initViews();
     }
 
-    @Override
     protected void initViews() {
         mViewPager=findViewById(R.id.viewpager);
         tabLayout= findViewById(R.id.tabs);
