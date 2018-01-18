@@ -36,6 +36,16 @@
 
         <activity android:name=".ui.web.WebActivity"/>
 
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ui.lottery.LotteryActivity" />
+
+        <activity android:name=".ui.tiku.ClassFourActivity" />
+        <activity android:name=".ui.tiku.ClassOneActivity"/>
+        <activity android:name=".ui.tiku.OneByOneActivity"/>
+
+        <activity android:name=".ui.ari.AriActivity"/>
+        <activity android:name=".ui.postCode.PostCodeActivitry"/>
+
     </application>
 
 </manifest>

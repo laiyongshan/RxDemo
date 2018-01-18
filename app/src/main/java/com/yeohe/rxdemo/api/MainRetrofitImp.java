@@ -1,8 +1,10 @@
 package com.yeohe.rxdemo.api;
 
+import com.yeohe.rxdemo.bean.AWardBean;
 import com.yeohe.rxdemo.bean.BoxBean1;
 import com.yeohe.rxdemo.bean.BoxBean2;
 import com.yeohe.rxdemo.bean.BoxBean3;
+import com.yeohe.rxdemo.bean.LotteryTypeBean;
 import com.yeohe.rxdemo.bean.MobileAddressBean;
 import com.yeohe.rxdemo.bean.RateBean;
 import com.yeohe.rxdemo.bean.WXArticleBean;
@@ -64,6 +66,21 @@ public interface MainRetrofitImp {
      */
     @GET("wx/article/search")
     Observable<WXArticleBean> getWxArticle(@Query("key") String appkey,@Query("cid") String cid,@Query("page") int page,@Query("size") int siz);
+
+
+    /**
+     * 获取支持彩票种类
+     * */
+    @GET("lottery/list")
+    Observable<LotteryTypeBean> getLotteryType(@Query("key") String appkey);
+
+
+    /**
+     *获取中奖详情
+    */
+    @GET("lottery/query")
+    Observable<AWardBean> getAwardDetail(@Query("key") String appkey,@Query("name") String name);
+
 
 
 

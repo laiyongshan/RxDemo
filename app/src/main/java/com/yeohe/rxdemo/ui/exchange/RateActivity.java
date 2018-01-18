@@ -100,7 +100,7 @@ public class RateActivity extends AppCompatActivity {
         spinner.setItems("工商银行","招商银行","建设银行","中国银行","交通银行","农业银行");
         spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(MaterialSpinner materialSpinner, int i, long l, Object o) {
+                public void onItemSelected(MaterialSpinner materialSpinner, int i, long l, Object o) {
                 switch (i){
                     case 0:
                         getRateData("0");

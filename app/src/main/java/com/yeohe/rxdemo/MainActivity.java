@@ -14,9 +14,13 @@ import android.widget.Toast;
 
 import com.yeohe.rxdemo.adapter.TypeAdapter;
 import com.yeohe.rxdemo.ui.WXArticle.WXArticleActivity;
+import com.yeohe.rxdemo.ui.ari.AriActivity;
 import com.yeohe.rxdemo.ui.boxoffice.BoxOfficeActivity;
 import com.yeohe.rxdemo.ui.exchange.RateActivity;
+import com.yeohe.rxdemo.ui.lottery.LotteryActivity;
 import com.yeohe.rxdemo.ui.mobileAddress.MobileAddressActivity;
+import com.yeohe.rxdemo.ui.postCode.PostCodeActivitry;
+import com.yeohe.rxdemo.ui.tiku.TikuActivity;
 import com.yeohe.rxdemo.utils.ToastUtil;
 import com.yeohe.rxdemo.widgets.MyGridView;
 
@@ -60,21 +64,37 @@ public class MainActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         intent=new Intent(MainActivity.this, MobileAddressActivity.class);
-                        startActivity(intent);
                         break;
+
+                    case 1:
+                        intent=new Intent(MainActivity.this, PostCodeActivitry.class);
+                        break;
+
+                    case 2:
+                        intent=new Intent(MainActivity.this, AriActivity.class);
+                        break;
+
+                    case 3:
+                        intent=new Intent(MainActivity.this, TikuActivity.class);
+                        break;
+
                     case 4:
                         intent=new Intent(MainActivity.this, BoxOfficeActivity.class);
-                        startActivity(intent);
                         break;
                     case 5:
                         intent=new Intent(MainActivity.this, RateActivity.class);
-                        startActivity(intent);
                         break;
+
+                    case 6:
+                        intent=new Intent(MainActivity.this, LotteryActivity.class);
+                        break;
+
                     case 7:
                         intent=new Intent(MainActivity.this, WXArticleActivity.class);
-                        startActivity(intent);
                         break;
                 }
+
+                startActivity(intent);
 
             }
         });

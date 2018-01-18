@@ -1,9 +1,11 @@
 package com.yeohe.rxdemo.api;
 
 
+import com.yeohe.rxdemo.bean.AWardBean;
 import com.yeohe.rxdemo.bean.BoxBean1;
 import com.yeohe.rxdemo.bean.BoxBean2;
 import com.yeohe.rxdemo.bean.BoxBean3;
+import com.yeohe.rxdemo.bean.LotteryTypeBean;
 import com.yeohe.rxdemo.bean.MobileAddressBean;
 import com.yeohe.rxdemo.bean.RateBean;
 import com.yeohe.rxdemo.bean.WXArticleBean;
@@ -79,6 +81,26 @@ public class MainAPIServiceImp extends APIService {
         Observable<WXArticleBean> wxArticle_Observable=apiManager.getWxArticle(appkey, cid,page,size);
         return wxArticle_Observable;
     }
+
+
+    /**
+     * 获取支持彩票种类
+     * */
+    public static Observable<LotteryTypeBean> getLotteryType(String appkey){
+        Observable<LotteryTypeBean> lotteryType_Observable=apiManager.getLotteryType(appkey);
+        return lotteryType_Observable;
+    }
+
+
+
+    /**
+     *获取中奖详情
+     */
+    public static Observable<AWardBean> getAwardDetail(String appkey,String name){
+        Observable<AWardBean> aWard_Observable=apiManager.getAwardDetail(appkey,name);
+        return aWard_Observable;
+    }
+
 
     /**
      * @return

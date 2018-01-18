@@ -26,7 +26,7 @@ public class AppStartActivity extends BaseActivity {
     private final Runnable waitCallback = new Runnable() {
         @Override
         public void run() {
-                Intent intent = new Intent(AppStartActivity.this, WXArticleActivity.class);
+                Intent intent = new Intent(AppStartActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
         }
