@@ -35,5 +35,5 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
-
+    <style name="Widget.GifMoviewView" parent="@android:style/Widget"></style>
 </resources>
